@@ -125,4 +125,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+<<<<<<< HEAD
 #salam2
+=======
+#salam1
+>>>>>>> 4b7ba31 (say hello on setting ___test___2)
