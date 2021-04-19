@@ -102,10 +102,29 @@ USE_L10N = True
 USE_TZ = True
 
 
+
+
+
+
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "assets"
+]
+STATIC_ROOT = BASE_DIR / "static_cdn" / "static_root"
+
+MEDIA_URL = '/site_media/'
+MEDIA_ROOT = BASE_DIR / "static_cdn" / "media_root"
+
+
+
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
