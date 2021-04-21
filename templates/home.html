@@ -1,4 +1,5 @@
 {% extends 'shared/__main__.html' %}
+{% load render_partial %}
 {% block navbar %}
-{% include "shared/navbar.html" %}
+{% render_partial 'navbar' %}
 {% endblock navbar %}
