@@ -71,15 +71,21 @@
                  
 
                  
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
-                <i class="nav-icon fa fa-th"></i>
-                <p>
-                  ویجت‌ها
-                  <span class="right badge badge-danger">جدید</span>
-                </p>
-              </a>
-            </li>
+            {% for foo in navlist %}
+                <i class="nav-item">
+                <a href="{{ foo.link }}" class="nav-link">
+                    <i class="nav-icon fa {{ foo.icon }}"></i>
+                    <p>
+                        {{ foo.title }}
+                        {% if foo.new == True %}
+                            <span class="right badge badge-danger">جدید</span>
+                        {% endif %}
+                    </p>
+                </a>
+                </i>
+                <br>
+            {% endfor %}
+
             
 
             <li class="nav-item has-treeview menu-open">
@@ -87,9 +93,9 @@
 
 
               <a href="#" class="nav-link active">
-                <i class="nav-icon fa fa-dashboard"></i>
+                <i class="nav-icon fa fa-shopping-bag" aria-hidden="true"></i>
                 <p>
-                  سر تیتر
+                  سفارشات
                   <i class="right fa fa-angle-left"></i>
                 </p>
               </a>
@@ -258,7 +264,30 @@
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
+
       </div>
+
     </div>
     <!-- /.sidebar -->
+      <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>
+<p>Envelope icon as a link:
+  <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+</p>
+<p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+<p>Search icon on a button:
+  <button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </button>
+</p>
+<p>Search icon on a styled button:
+  <button type="button" class="btn btn-info">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </button>
+</p>
+<p>Print icon: <span class="glyphicon glyphicon-print"></span></p>
+<p>Print icon on a styled link button:
+  <a href="#" class="btn btn-success btn-lg">
+    <span class="glyphicon glyphicon-print"></span> Print
+  </a>
+</p>
   </aside>
