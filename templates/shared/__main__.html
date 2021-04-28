@@ -1,13 +1,32 @@
 {% load static %}
+{% load render_partial %}
 <!DOCTYPE html>
 <html>
 <head>
   {% include "shared/footer_header_mainer/mainheader.html" %}
+  {% block head %}
+  
+  {% endblock %}
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
-{% block navbar %}{% endblock navbar %}
+{% render_partial 'navbar' %}
+
+
+<!--  START  -->
+<div class="content-wrapper">
+{% block body %}
+{% endblock %}
+</div>
+
+<!-- END -->
+
+
+
 </div>
   {% include "shared/footer_header_mainer/mainfooter.html" %}
+  {% block footerbody %}
+  
+  {% endblock %}
 </body>
 </html>

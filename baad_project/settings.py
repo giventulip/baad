@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     #My App
     'navigationbar',
     'category',
+    'web_posts',
 ]
 
 MIDDLEWARE = [
